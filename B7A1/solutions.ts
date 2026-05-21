@@ -18,3 +18,19 @@ const checkType = (value: StringOrNumber): string => {
     return 'Number';
   }
 };
+
+// problem 4
+const getProperty = <X>(obj: X, key: keyof X) => {
+    return obj[key];
+}
+
+// Problem 5 Solution
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+}
+
+const toggleReadStatus = (obj: Book): object => {
+  return { ...obj, isRead: true };
+};
