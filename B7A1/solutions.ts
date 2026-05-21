@@ -58,3 +58,20 @@ class Student extends Person {
         return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
     }
 }
+
+
+// Problem 7 Solution
+const getIntersection = (arr1: number[], arr2: number[]): number[] => {
+    const set1: Set<number> = new Set(arr1);
+    const set2: Set<number> = new Set(arr2);
+
+    const newSet: Set<number> = new Set();
+
+    for (const num of set1) {
+        if (set2.has(num)) {
+            newSet.add(num);
+        }    
+    }
+    const ans:number[] = [...newSet]
+    return ans;
+}
