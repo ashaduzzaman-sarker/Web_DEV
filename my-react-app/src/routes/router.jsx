@@ -3,6 +3,12 @@ import { createBrowserRouter } from "react-router";
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello World</div>,
-  },
+    component: RootLayout,
+    children: [
+      {
+        index: true,
+        component: Home,
+      }
+    ]
+  }, 
 ]);
